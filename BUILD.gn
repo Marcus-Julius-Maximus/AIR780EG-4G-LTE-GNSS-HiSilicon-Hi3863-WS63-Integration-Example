@@ -1,0 +1,33 @@
+static_library("air780_app") {
+    sources = [
+        "air780_app.c",
+        "air780_uart.c",
+        "air780_uart.h",
+        "air780_modem.c",
+        "air780_modem.h",
+        "air780_mqtt.c",
+        "air780_mqtt.h",
+        "air780_telemetry.c",
+        "air780_telemetry.h",
+    ]
+
+    include_dirs = [
+        "//utils/native/lite/include",
+        "//commonlibrary/utils_lite/include",
+        "//kernel/liteos_m/kal/cmsis",
+        "//applications/sample/wifi-iot/app/f5_smart_wearables",
+        "//third_party/cmsis/CMSIS_5/CMSIS/RTOS2/Include",
+        "//base/iothardware/peripheral/interfaces/inner_api", # 包含 iot_uart.h 和 iot_gpio.h
+        "//device/board/isoh/nl63pro/sdk/drivers/peripheral/include",
+        "//device/soc/hisilicon/ws63v100/sdk/include/driver",
+        "//device/soc/hisilicon/ws63v100/sdk/drivers/drivers/hal/uart",
+        "//device/soc/hisilicon/ws63v100/sdk/drivers/chips/ws63/porting/uart",
+        "//device/soc/hisilicon/ws63v100/sdk/middleware/utils/common_headers/native",
+    ]
+    defines = [
+        "CHIP_WS63=1",
+        "TARGET_CHIP_WS63=1",
+        "CONFIG_UART_SUPPORT_TX=1",
+        "CONFIG_UART_SUPPORT_RX=1",
+        ]
+}
