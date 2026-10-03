@@ -380,7 +380,3 @@ It takes effect immediately and a status report is published to `omega/1/status`
 - OpenHarmony source (Gitee): <https://gitee.com/openharmony>
 
 ---
-
-## License
-
-This repository does not include a `LICENSE` file. If you plan to publish it as open source, consider adding one (e.g. MIT / Apache-2.0); also note the copyright of Luat's AT command documentation and related materials.
